@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "articles": {
+    "PB-1": "All active repos MUST follow the dual-repo pattern: private dev repo for all development, public pub repo as read-only mirror",
+    "PB-2": "Public publication repos MUST NOT receive direct pushes; all updates MUST flow through the publish script from the dev repo",
+    "PB-3": "Internal artifacts (.specify/, specs/, .private/, instructions/, devinstructions/, docs/archive/, tests/outputs/, state/, logs/, feedback/, governance/, memory/, metrics/) MUST be excluded from publication via .publish-exclude",
+    "PB-4": "Publishes MUST be release-aligned; the publish script MUST be used (no ad-hoc file copies or direct pushes)",
+    "PB-5": "Public repos MUST have issues, wiki, and projects disabled; CONTRIBUTING.md MUST explain the contribution policy",
+    "PB-6": "Dev repos MUST have a pre-push hook that queries GitHub API for repo visibility and blocks pushes to public remotes; bypass via PUBLISH_OVERRIDE=1 is reserved for the publish script only"
+  }
+}
